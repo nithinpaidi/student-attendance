@@ -1,0 +1,57 @@
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+</style>
+</head>
+<body>
+<div class="container">	
+        <a href="{{ url_for('fine') }}" class="btn btn-primary">goback</a>
+</div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="card">
+ <div class="card-header">
+    <h2 class="text-center text-primary">View Fine</h2>
+   </div>
+
+<table border="2">
+<tr>
+<th>Roll Number</th>
+<th>Date</th>
+</tr>
+{% for i in data %}
+<tr>
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+</tr>
+{% endfor %}
+</table>
+
+
+<table border="2">
+<tr>
+<th>Roll Number</th>
+<th>Count</th>
+<th>Total Fine</th>
+</tr>
+{% for i in data1 %}
+<tr>
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[1]*50}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

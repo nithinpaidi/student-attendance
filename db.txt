@@ -1,0 +1,5 @@
+create database r;
+create table data(name varchar(20),password varchar(20));
+
+
+create table attendance(date date,year varchar(25),branch varchar(20),section varchar(20),roll_number varchar(20));
